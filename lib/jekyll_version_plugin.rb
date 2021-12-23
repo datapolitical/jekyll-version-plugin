@@ -67,9 +67,9 @@ module Jekyll
       def git_describe
         tagged_version = case params.fetch(:format, "short")
                          when "short", OPTION_NOT_SPECIFIED
-                           run("git describe --tags --always")
+                           run("git -C ./theme describe --tags --always")
                          when "long"
-                           run("git describe --tags --always --long")
+                           run("git -C ./theme describe --tags --always --long")
                          end
 
         tagged_version if command_succeeded?
@@ -78,9 +78,9 @@ module Jekyll
       def parse_head
         head_commitish = case params.fetch(:format, "short")
                          when "short", OPTION_NOT_SPECIFIED
-                           run("git rev-parse --short HEAD")
+                           run("git -C ./theme rev-parse --short HEAD")
                          when "long"
-                           run("git rev-parse HEAD")
+                           run("git -C ./theme rev-parse HEAD")
                          end
 
         head_commitish if command_succeeded?
