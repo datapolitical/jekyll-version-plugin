@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module Jekyll
-  module VersionPlugin
+  module VersionPluginTheme
     # A Jekyll Tag type that renders a version identifier for your Jekyll site
     # sourced from the `git` repository containing your code.
     #
@@ -101,4 +101,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag("project_version", Jekyll::VersionPlugin::Tag)
+Liquid::Template.register_tag("project_version_theme", Jekyll::VersionPluginTheme::Tag)
