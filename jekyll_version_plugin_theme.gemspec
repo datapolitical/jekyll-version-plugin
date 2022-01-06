@@ -4,7 +4,7 @@ lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name                   = "jekyll_version_plugin"
+  spec.name                   = "jekyll_version_plugin_theme"
   spec.version                = "2.0.1"
   spec.authors                = ["Rob Murray"]
   spec.email                  = ["robmurray17@gmail.com"]
